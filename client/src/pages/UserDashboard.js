@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import Github from "../components/Github";
+import Leetcode from "../components/Leetcode";
+import Quotes from "../components/Quotes";
 
 const UserDashboard = () => {
   return (
-    <div>UserDashboard</div>
-  )
-}
+    <>
+      <Github />
+      <Leetcode />
+      <Quotes />
+    </>
+  );
+};
 
-export default UserDashboard
+export default UserDashboard;
