@@ -1,4 +1,4 @@
-import Github from "./components/Github";
+import Github from "./components/GitHub/Github";
 import Leetcode from "./components/Leetcode";
 import Quotes from "./components/Quotes";
 import Signup from "./pages/Signup";

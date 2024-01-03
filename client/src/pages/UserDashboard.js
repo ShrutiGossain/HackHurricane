@@ -1,5 +1,5 @@
 import React from "react";
-import Github from "../components/Github";
+import Github from "../components/GitHub/Github";
 import Leetcode from "../components/Leetcode";
 import Quotes from "../components/Quotes";
 
