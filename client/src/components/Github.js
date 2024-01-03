@@ -5,6 +5,7 @@ import {
   faBolt,
   faFire,
   faFireFlameCurved,
+  faSlash,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Github = () => {
@@ -95,32 +96,36 @@ const Github = () => {
         <div className="grid grid-cols-12 col-span-12 m-8 p-8 bg-white rounded-xl justify-center items-center">
           {/* <span className="col-span-12">Repos Contributed in Today!</span> */}
           <div className="col-span-12 justify-center items-center my-4 border-t-[1px] border-l-[1px] border-b-[1px] border-gray-200">
-            <div className="grid grid-cols-12 col-span-12 justify-center items-center">
-              {cols.map((element, index) => (
-                <div className="p-4 border-r-[1px] border-b-[1px] border-gray-200">
-                  {element}
-                </div>
-              ))}
-            </div>
             {repos.map((element, index) => (
               <div className="grid grid-cols-12 col-span-12 justify-center items-center">
-                <div className="px-4 border-r-[1px] border-gray-200">
-                  {element.name}
+                <div className="px-4">{element.name}</div>
+                <div className="grid grid-rows col-span-3 bg-gradient-to-tr p-4 m-4 from-white to-[#f0f0f0] w-32 h-32 rounded-full">
+                  <span className="text-7xl font-bold text-center">
+                    {element.issuesClosed}
+                  </span>
+                  <span className="text-sm font-extralight text-center">
+                    closed
+                  </span>
+                  <span className="text-base font-semibold text-center">
+                    {element.issuesCreated}
+                  </span>
                 </div>
-                <div className="px-4 border-r-[1px] border-gray-200">
-                  {element.issuesCreated}
+                <div className="grid grid-rows col-span-3 bg-gradient-to-tr p-4 m-4 from-white to-[#f0f0f0] w-32 h-32 rounded-full">
+                  <span className="text-7xl font-bold  text-center">
+                    {element.PRmerged}
+                  </span>
+                  <span className="text-sm font-extralight text-center">
+                    merged
+                  </span>
+                  <span className="text-base font-semibold  text-center">
+                    {element.PRopened}
+                  </span>
                 </div>
-                <div className="px-4 border-r-[1px] border-gray-200">
-                  {element.issuesClosed}
-                </div>
-                <div className="px-4 border-r-[1px] border-gray-200">
-                  {element.PRopened}
-                </div>
-                <div className="px-4 border-r-[1px] border-gray-200">
-                  {element.PRmerged}
-                </div>
-                <div className="px-4 border-r-[1px] border-gray-200">
-                  {element.commits}
+                <div className="px-4 ">
+                  <span className="text-7xl font-bold text-center">
+                    {element.commits}
+                  </span>
+                  <span className="text-sm font-light">commits</span>
                 </div>
               </div>
             ))}
