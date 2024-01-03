@@ -31,7 +31,7 @@ const Github = () => {
   ];
   const repos = [
     {
-      name: "Repkit",
+      name: "GameSphere",
       issuesCreated: "24",
       issuesClosed: "12",
       PRmerged: "5",
@@ -39,7 +39,7 @@ const Github = () => {
       commits: "345",
     },
     {
-      name: "Repkit",
+      name: "Heutiful",
       issuesCreated: "24",
       issuesClosed: "12",
       PRmerged: "5",
@@ -47,7 +47,7 @@ const Github = () => {
       commits: "1234",
     },
     {
-      name: "Repkit",
+      name: "Polar",
       issuesCreated: "24",
       issuesClosed: "12",
       PRmerged: "5",
@@ -66,6 +66,8 @@ const Github = () => {
   return (
     <div>
       <div className="grid grid-cols-12 justify-center items-center col-span-12 p-8 m-8 bg-gradient-to-b from-[#f0f0f0] to-gray-100 shadow-xl rounded-md">
+
+
         <div className="grid grid-cols-12 col-span-12 justify-between items-center border-b-2 border-white pb-4">
           <span className="col-span-10 text-sm font-extralight my-2">
             {greeting} , {username}
@@ -94,39 +96,60 @@ const Github = () => {
         </div>
 
         <div className="grid grid-cols-12 col-span-12 m-8 p-8 bg-white rounded-xl justify-center items-center">
-          {/* <span className="col-span-12">Repos Contributed in Today!</span> */}
-          <div className="col-span-12 justify-center items-center my-4 border-t-[1px] border-l-[1px] border-b-[1px] border-gray-200">
+          <span className="col-span-12 text-center text-sm font-extralight capitalize">
+            Repos Contributed in Today
+          </span>
+          
+          <div className="col-span-12 justify-center items-center my-4 p-4 border-[1px] border-gray-200">
             {repos.map((element, index) => (
-              <div className="grid grid-cols-12 col-span-12 justify-center items-center">
-                <div className="px-4">{element.name}</div>
+              <div className="grid grid-cols-12 col-span-12 justify-center items-center p-4">
+
+                <div className="grid grid-rows col-span-3 px-4 font-bold uppercase">
+                  {element.name}
+                </div>
+
                 <div className="grid grid-rows col-span-3 bg-gradient-to-tr p-4 m-4 from-white to-[#f0f0f0] w-32 h-32 rounded-full">
                   <span className="text-7xl font-bold text-center">
                     {element.issuesClosed}
                   </span>
-                  <span className="text-sm font-extralight text-center">
+                  <span className="text-[10px] font-extralight text-center">
                     closed
                   </span>
                   <span className="text-base font-semibold text-center">
                     {element.issuesCreated}
                   </span>
+                  <span className="text-[10px] font-extralight text-center capitalize">
+                    issues opened
+                  </span>
                 </div>
+
+
                 <div className="grid grid-rows col-span-3 bg-gradient-to-tr p-4 m-4 from-white to-[#f0f0f0] w-32 h-32 rounded-full">
                   <span className="text-7xl font-bold  text-center">
                     {element.PRmerged}
                   </span>
-                  <span className="text-sm font-extralight text-center">
+                  <span className="text-[10px] font-extralight text-center">
                     merged
                   </span>
                   <span className="text-base font-semibold  text-center">
                     {element.PRopened}
                   </span>
+                  <span className="text-[10px] font-extralight text-center">
+                    PRs opened
+                  </span>
                 </div>
-                <div className="px-4 ">
+
+
+                <div className="px-4">
                   <span className="text-7xl font-bold text-center">
                     {element.commits}
                   </span>
-                  <span className="text-sm font-light">commits</span>
+                  <div className="text-[10px] font-extralight ml-8">
+                    commits
+                  </div>
                 </div>
+
+
               </div>
             ))}
           </div>
