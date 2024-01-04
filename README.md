@@ -33,7 +33,7 @@ In addition to being an analytics tool, StatHub encourages community engagement 
 - run the following commands
 
    ```
-   cd stellar-vision
+   cd hackHurricane
    ``` 
 
    ```
