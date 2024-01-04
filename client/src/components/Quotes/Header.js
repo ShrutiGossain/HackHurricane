@@ -60,7 +60,7 @@ const Header = () => {
   return (
     <div className="grid justify-center items-center bg-gradient-to-b from-[#f0f0f0] to-white rounded-xl p-16 m-8">
       <animated.span
-        className="col-span-12 text-center text-5xl font-bold capitalize"
+        className="col-span-12 text-center text-5xl font-bold"
         style={{ ...styles }}
       >
         Daily Motivation
