@@ -1,6 +1,3 @@
-import Github from "./components/GitHub/Github";
-import Leetcode from "./components/Leetcode/Leetcode";
-import Quotes from "./components/Quotes";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import UserDashboard from "./pages/UserDashboard";
