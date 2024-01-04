@@ -60,14 +60,14 @@ const Header = () => {
   return (
     <div className="grid justify-center items-center bg-gradient-to-b from-[#f0f0f0] to-white rounded-xl p-16 m-8">
       <animated.span
-        className="col-span-12 text-center text-5xl font-bold"
+        className="col-span-12 text-center text-5xl font-bold capitalize"
         style={{ ...styles }}
       >
         Daily Motivation
       </animated.span>
 
       <animated.div
-        className="col-span-12 grid grid-cols-12 justify-between items-center gap-8 text-4xl font-semibold text-gray-400 p-4 my-8 text-center capitalize"
+        className="col-span-12 grid grid-cols-12 justify-between items-center gap-8 text-4xl font-semibold text-gray-400 p-4 my-8 text-center "
         style={{ ...styles }}
       >
         <animated.span className="col-span-8">{quote}</animated.span>
