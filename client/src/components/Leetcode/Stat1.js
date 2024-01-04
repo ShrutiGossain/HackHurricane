@@ -2,24 +2,29 @@ import React from "react";
 import { Link, ScrollRestoration } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBolt,
+  faCheck,
   faFire,
   faFireFlameCurved,
-  faSlash,
+  faFireFlameSimple,
 } from "@fortawesome/free-solid-svg-icons";
 import { useScroll , useSpring, animated } from "@react-spring/web";
 
 const Stat1 = () => {
   const gitHubStats = [
     {
-      name: "Today's contributions",
+      name: "Problems Solved",
       value: "12",
-      icon: faBolt,
+      icon: faCheck,
     },
     {
       name: "Current Streak",
       value: "12",
       icon: faFire,
+    },
+    {
+      name: "DCC",
+      value: "24",
+      icon: faFireFlameSimple,
     },
     {
       name: "Max Streak",
@@ -46,7 +51,7 @@ const Stat1 = () => {
 
   return (
     <animated.div
-      className="col-span-12 grid grid-cols-12 m-8 p-8 bg-gradient-to-tr from-blue-400 to-blue-900 shadow-lg rounded-lg cursor-pointer"
+      className="col-span-12 grid grid-cols-12 m-8 p-8 bg-white shadow-lg rounded-lg cursor-pointer text-black"
       style={{
         ...springs,
       }}
@@ -55,12 +60,12 @@ const Stat1 = () => {
         <div
           className={
             element.name != "Max Streak"
-              ? "grid grid-rows col-span-4 border-r-2 border-white"
-              : "grid grid-rows col-span-4"
+              ? "grid grid-rows col-span-3 border-r-2 border-gray-400"
+              : "grid grid-rows col-span-3"
           }
         >
           <animated.div
-            className="flex justify-center items-center text-7xl font-bold text-white text-center"
+            className="flex justify-center items-center text-7xl font-bold text-center"
             style={{
               ...styles,
             }}
@@ -74,7 +79,7 @@ const Stat1 = () => {
               icon={element.icon}
             />
           </animated.div>
-          <span className="text-base font-semibold text-white text-center">
+          <span className="text-base font-semibold  text-center">
             {element.name}
           </span>
         </div>

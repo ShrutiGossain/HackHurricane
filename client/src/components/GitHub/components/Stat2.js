@@ -1,8 +1,10 @@
 import React from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 const Stat2 = () => {
   const repos = [
     {
+      id: 1,
       name: "GameSphere",
       issuesCreated: "24",
       issuesClosed: "12",
@@ -11,6 +13,7 @@ const Stat2 = () => {
       commits: "345",
     },
     {
+      id: 2,
       name: "Heutiful",
       issuesCreated: "24",
       issuesClosed: "12",
@@ -19,6 +22,7 @@ const Stat2 = () => {
       commits: "1234",
     },
     {
+      id: 3,
       name: "Polar",
       issuesCreated: "24",
       issuesClosed: "12",
@@ -35,13 +39,34 @@ const Stat2 = () => {
     "PR merged",
     "commits",
   ];
+
+  const springs = useSpring({
+    from: { x: 50 },
+    to: { x: 0 },
+  });
+
+  const property = useSpring({
+    from: { y: 50, opacity: 0 },
+    to: { y: 0, opacity: 1 },
+  });
+
   return (
-    <div className="grid grid-cols-12 col-span-12 m-8 p-8 bg-white rounded-xl justify-center items-center">
+    <animated.div
+      className="grid grid-cols-12 col-span-12 m-8 p-8 bg-white rounded-xl justify-center items-center"
+      style={{
+        ...springs,
+      }}
+    >
       <span className="col-span-12 text-center text-sm font-extralight capitalize">
         Repos Contributed in Today
       </span>
 
-      <div className="col-span-12 justify-center items-center my-4 p-4 border-[1px] border-gray-200">
+      <animated.div
+        className="col-span-12 justify-center items-center my-4 p-4 border-[1px] border-gray-200"
+        style={{
+          ...property,
+        }}
+      >
         {repos.map((element, index) => (
           <div className="grid grid-cols-12 col-span-12 justify-center items-center p-4">
             <div className="grid grid-rows col-span-3 px-4 font-light capitalize">
@@ -49,9 +74,12 @@ const Stat2 = () => {
             </div>
 
             <div className="grid grid-rows col-span-3 bg-gradient-to-tr p-4 m-4 from-white to-[#f0f0f0] w-32 h-32 rounded-full">
-              <span className="text-7xl font-bold text-center">
+              <animated.span
+                className="text-7xl font-bold text-center"
+                style={{ ...property }}
+              >
                 {element.issuesClosed}
-              </span>
+              </animated.span>
               <span className="text-[10px] font-extralight text-center">
                 closed
               </span>
@@ -64,9 +92,12 @@ const Stat2 = () => {
             </div>
 
             <div className="grid grid-rows col-span-3 bg-gradient-to-tr p-4 m-4 from-white to-[#f0f0f0] w-32 h-32 rounded-full">
-              <span className="text-7xl font-bold  text-center">
+              <animated.span
+                className="text-7xl font-bold  text-center"
+                style={{ ...property }}
+              >
                 {element.PRmerged}
-              </span>
+              </animated.span>
               <span className="text-[10px] font-extralight text-center">
                 merged
               </span>
@@ -79,15 +110,18 @@ const Stat2 = () => {
             </div>
 
             <div className="px-4">
-              <span className="text-7xl font-bold text-center">
+              <animated.span
+                className="text-7xl font-bold text-center"
+                style={{ ...property }}
+              >
                 {element.commits}
-              </span>
+              </animated.span>
               <div className="text-[10px] font-extralight ml-8">commits</div>
             </div>
           </div>
         ))}
-      </div>
-    </div>
+      </animated.div>
+    </animated.div>
   );
 };
 
