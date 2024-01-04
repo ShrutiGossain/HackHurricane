@@ -6,7 +6,7 @@ const Sidebar = () => {
       {/* Main Navigation */}
       <header>
         {/* Sidebar */}
-        <nav id="sidebarMenu" className="collapse d-lg-block sidebar collapse bg-white">
+        <nav id="sidebarMenu" className="collapse d-lg-block sidebar bg-white">
           <div className="position-sticky">
             <div className="list-group list-group-flush mx-3 mt-4">
               <a href="#" className="list-group-item list-group-item-action py-2 ripple" aria-current="true">
