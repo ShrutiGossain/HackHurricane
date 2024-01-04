@@ -23,6 +23,7 @@ const Task = () => {
   };
 
   return (
+
     <div className="text-white text-center">
       <h1 className="text-4xl font-bold text-#ADD8E6 -800 mb-8">Todo List</h1>
       <button
@@ -50,5 +51,4 @@ const Task = () => {
     </div>
   );
 };
-
 export default Task;
