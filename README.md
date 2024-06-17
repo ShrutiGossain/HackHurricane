@@ -28,7 +28,7 @@ In addition to being an analytics tool, StatHub encourages community engagement 
 - clone the repo 
 
    ```
-   git clone git@github.com:arcVaishali/hackHurricane.git
+   git clone git@github.com:ShrutiGossain/hackHurricane.git
    ```
 - run the following commands
 
